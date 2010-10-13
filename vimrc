@@ -7,7 +7,13 @@ syntax on
 "Forget compatibility with Vi. Who care
 set nocompatible
 
+"Write the old file out when switching between files.
 set autowrite
+
+"Make backspace behave like most other code editors
+set backspace=indent, eol, start
+
+"Display current cursor position in lower right corner.
 set ruler
 
 "Want a different map leader than \
@@ -20,7 +26,8 @@ set timeoutlen=500
 "Switch between buffers without saving
 set hidden
 
-"Set the color scheme
+"Set the color scheme. Change this to your preference. 
+"Here's 100 to choose from: http://www.vim.org/scripts/script.php?script_id=625
 colorscheme anotherdark
 
 "Set font type and size
@@ -45,6 +52,7 @@ set number
 set smartindent
 set autoindent
 
+"Always show the status line
 set laststatus=2
 
 "Prefer a slightly higher line height
@@ -56,8 +64,8 @@ set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=85
 
-"Split windows BELOW current window!
-set splitbelow              
+"Set incremental searching"
+set incsearch
 
 "Highlight searching
 set hlsearch
@@ -80,8 +88,11 @@ nnoremap <leader>ft Vatzf
 " Create dictionary for custom expansions
 set dictionary+=/Users/jeff_way/.vim/dict.txt
 
-"Open vertical split and switch over
+"Opens a vertical split and switches over (\v)
 nnoremap <leader>v <C-w>v<C-w>l
+
+"Split windows below the current window.
+set splitbelow              
 
 "Set up an HTML5 template for all new .html files
 "autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
@@ -110,15 +121,6 @@ autocmd BufEnter * cd %:p:h
 "Map code completion to , + tab
 imap ,<tab> <C-x><C-o>
 
-"Shortcut for NERDTreeToggle
-nmap ,nt :NERDTreeToggle
-
-"Show hidden files in NerdTree
-let NERDTreeShowHidden=1
-
-"autopen NERDTree and focus cursor in new document
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
 
 "Auto-completion menu
 set wildmode=list:longest
@@ -128,7 +130,6 @@ set completeopt=longest,menuone
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
   \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-
 inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
   \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
@@ -143,6 +144,19 @@ nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
+
+"------------------------"
+"NERDTREE PLUGIN SETTINGS
+"------------------------"
+"Shortcut for NERDTreeToggle
+nmap ,nt :NERDTreeToggle
+
+"Show hidden files in NerdTree
+let NERDTreeShowHidden=1
+
+"autopen NERDTree and focus cursor in new document
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
 
 "Spelling corrects. Just for example. Add yours below.
 iab teh the
