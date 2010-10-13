@@ -17,9 +17,6 @@ syntax on
 "Write the old file out when switching between files.
 set autowrite
 
-"Make backspace behave like most other code editors
-set backspace=indent, eol, start
-
 "Display current cursor position in lower right corner.
 set ruler
 
@@ -35,9 +32,9 @@ set hidden
 
 "Set the color scheme. Change this to your preference. 
 "Here's 100 to choose from: http://www.vim.org/scripts/script.php?script_id=625
-colorscheme anotherdark
+colorscheme darkZ
 
-"Set font type and size
+"Set font type and size. Depends on the resolution. Larger screens, prefer h15
 set guifont=Monaco:h12
 
 "Tab stuff
@@ -69,7 +66,6 @@ set linespace=3
 set wrap
 set textwidth=79
 set formatoptions=qrn1
-set colorcolumn=85
 
 "Set incremental searching"
 set incsearch
@@ -128,7 +124,6 @@ autocmd BufEnter * cd %:p:h
 "Map code completion to , + tab
 imap ,<tab> <C-x><C-o>
 
-
 "Auto-completion menu
 set wildmode=list:longest
 
@@ -141,7 +136,7 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
   \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
 "Map escape key to jj -- much faster
-inomap jj <esc>
+imap jj <esc>
 
 "Delete all buffers (via Derek Wyatt)
 nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
