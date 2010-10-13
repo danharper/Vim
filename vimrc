@@ -1,11 +1,18 @@
+"
+" .vimrc File
+" Maintained by: Jeffrey Way
+" jeffrey@jeffrey-way.com
+" http://net.tutsplus.com
+"
+
+"Forget compatibility with Vi. Who cares.
+set nocompatible
+
 "Enable filetypes
 filetype on
 filetype plugin on
 filetype indent on
 syntax on
-
-"Forget compatibility with Vi. Who care
-set nocompatible
 
 "Write the old file out when switching between files.
 set autowrite
@@ -157,6 +164,10 @@ let NERDTreeShowHidden=1
 "autopen NERDTree and focus cursor in new document
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
+
+"Helpeful abbreviations
+iab lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+iab llorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 
 "Spelling corrects. Just for example. Add yours below.
 iab teh the
