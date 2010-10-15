@@ -32,10 +32,10 @@ set hidden
 
 "Set the color scheme. Change this to your preference. 
 "Here's 100 to choose from: http://www.vim.org/scripts/script.php?script_id=625
-colorscheme darkZ
+colorscheme anotherDark
 
-"Set font type and size. Depends on the resolution. Larger screens, prefer h15
-set guifont=Monaco:h12
+"Set font type and size. Depends on the resolution. Larger screens, prefer h20
+set guifont=Menlo:h12
 
 "Tab stuff
 set tabstop=3
