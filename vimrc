@@ -141,6 +141,15 @@ imap jj <esc>
 "Delete all buffers (via Derek Wyatt)
 nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
 
+"Bubble single lines (kicks butt)
+"http://vimcasts.org/episodes/bubbling-text/
+nmap <C-Up> ddkP
+nmap <C-Down> ddp
+
+"Bubble multiple lines
+vmap <C-Up> xkP`[V`]
+vmap <C-Down> xp`[V`]
+
 " Source the vimrc file after saving it. This way, you don't have to reload
 " Vim to see the changes.
 if has("autocmd")
