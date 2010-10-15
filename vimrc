@@ -73,6 +73,10 @@ set incsearch
 "Highlight searching
 set hlsearch
 
+" case insensitive search
+set ignorecase
+set smartcase
+
 "Hide MacVim toolbar by default
 set go-=T
 
@@ -96,6 +100,9 @@ nnoremap <leader>v <C-w>v<C-w>l
 
 "Split windows below the current window.
 set splitbelow              
+
+" session settings
+set sessionoptions=resize,winpos,winsize,buffers,tabpages,folds,curdir,help
 
 "Set up an HTML5 template for all new .html files
 "autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
@@ -123,6 +130,9 @@ autocmd BufEnter * cd %:p:h
 
 "Map code completion to , + tab
 imap ,<tab> <C-x><C-o>
+
+" More useful command-line completion
+set wildmenu
 
 "Auto-completion menu
 set wildmode=list:longest
@@ -155,6 +165,12 @@ vmap <C-Down> xp`[V`]
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
+"
+" easier window navigation
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
 
 "------------------------"
 "NERDTREE PLUGIN SETTINGS
