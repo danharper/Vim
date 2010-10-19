@@ -160,12 +160,14 @@ nmap <C-Down> ddp
 vmap <C-Up> xkP`[V`]
 vmap <C-Down> xp`[V`]
 
-" Source the vimrc file after saving it. This way, you don't have to reload
-" Vim to see the changes.
+" Source the vimrc file after saving it. This way, you don't have to reload Vim to see the changes.
 if has("autocmd")
-  autocmd bufwritepost .vimrc source $MYVIMRC
+ augroup myvimrchooks
+  au!
+  autocmd bufwritepost .vimrc source ~/.vimrc
+ augroup END
 endif
-"
+
 " easier window navigation
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
