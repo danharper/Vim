@@ -213,9 +213,6 @@ nmap <leader>hm :cd ~/ <CR>
 " Alphabetically sort CSS properties in file with :SortCSS
 :command! SortCSS :g#\({\n\)\@<=#.,/}/sort
 
-" Open .vimrc file in new pane with <leader>ev
-nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<CR>
-
 " Shortcut to opening a virtual split to right of current pane
 " Makes more sense than opening to the left
 nmap <leader>bv :bel vsp
