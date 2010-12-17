@@ -111,16 +111,16 @@ set sessionoptions=resize,winpos,winsize,buffers,tabpages,folds,curdir,help
 abbrev ff :! open -a firefox.app %:p<cr>
 
 "Map a change directory to the desktop - Mac specific
-nmap ,d :cd ~/Desktop<cr>:e.<cr>
+nmap <leader>d :cd ~/Desktop<cr>:e.<cr>
 
 "Shortcut for editing  vimrc file in a new tab
-nmap ,ev :tabedit $MYVIMRC<cr>
+nmap <leader>ev :tabedit $MYVIMRC<cr>
 
 "Change zen coding plugin expansion key to shift + e
 let g:user_zen_expandabbr_key = '<C-e>'
 
 "Faster shortcut for commenting. Requires T-Comment plugin
-map ,c <c-_><c-_>
+map <leader>c <c-_><c-_>
 
 "Saves time; maps the spacebar to colon
 nmap <space> :
@@ -129,7 +129,7 @@ nmap <space> :
 autocmd BufEnter * cd %:p:h
 
 "Map code completion to , + tab
-imap ,<tab> <C-x><C-o>
+imap <leader><tab> <C-x><C-o>
 
 " More useful command-line completion
 set wildmenu
@@ -178,7 +178,7 @@ nmap <C-l> <C-w>l
 "NERDTREE PLUGIN SETTINGS
 "------------------------"
 "Shortcut for NERDTreeToggle
-nmap ,nt :NERDTreeToggle <CR>
+nmap <leader>nt :NERDTreeToggle <CR>
 
 "Show hidden files in NerdTree
 let NERDTreeShowHidden=1
