@@ -178,7 +178,7 @@ nmap <C-l> <C-w>l
 "NERDTREE PLUGIN SETTINGS
 "------------------------"
 "Shortcut for NERDTreeToggle
-nmap ,nt :NERDTreeToggle
+nmap ,nt :NERDTreeToggle <CR>
 
 "Show hidden files in NerdTree
 let NERDTreeShowHidden=1
@@ -194,3 +194,28 @@ iab llorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius
 "Spelling corrects. Just for example. Add yours below.
 iab teh the
 iab Teh The
+
+" Train yourself to use hjkl
+" Disable arrow keys *shock* *horror*!
+"inoremap  <Up>     <NOP>
+"inoremap  <Down>   <NOP>
+"inoremap  <Left>   <NOP>
+"inoremap  <Right>  <NOP>
+"noremap   <Up>     <NOP>
+"noremap   <Down>   <NOP>
+"noremap   <Left>   <NOP>
+"noremap   <Right>  <NOP>
+
+" Get to home dir easier
+" <leader>hm is easier to type than :cd ~
+nmap <leader>hm :cd ~/ <CR>
+
+" Alphabetically sort CSS properties in file with :SortCSS
+:command! SortCSS :g#\({\n\)\@<=#.,/}/sort
+
+" Open .vimrc file in new pane with <leader>ev
+nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<CR>
+
+" Shortcut to opening a virtual split below current pane
+" Makes more sense than opening above
+nmap <leader>bv :bel vsp
