@@ -219,3 +219,15 @@ nmap <leader>bv :bel vsp
 
 " Saves file when Vim window loses focus
 au FocusLost * :wa
+
+" Backups
+set backupdir=~/.vim/tmp/backup// " backups
+set directory=~/.vim/tmp/swap// " swap files
+set backup " enable backup
+
+" No more stretching for navigating files
+noremap h ;
+noremap j h
+noremap k gj
+noremap l gk
+noremap ; l
