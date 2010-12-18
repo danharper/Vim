@@ -216,3 +216,6 @@ nmap <leader>hm :cd ~/ <CR>
 " Shortcut to opening a virtual split to right of current pane
 " Makes more sense than opening to the left
 nmap <leader>bv :bel vsp
+
+" Saves file when Vim window loses focus
+au FocusLost * :wa
