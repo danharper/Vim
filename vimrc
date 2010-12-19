@@ -226,11 +226,11 @@ set directory=~/.vim/tmp/swap// " swap files
 set backup " enable backup
 
 " No more stretching for navigating files
-noremap h ;
-noremap j h
-noremap k gj
-noremap l gk
-noremap ; l
+"noremap h ;
+"noremap j h
+"noremap k gj
+"noremap l gk
+"noremap ; l
 
 set showmatch " show matching brackets
 
